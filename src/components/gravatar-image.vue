@@ -9,7 +9,7 @@ export default {
     email: String
   },
   data: () => ({
-    fallback: 'monsterid',
+    fallback: 'robohash',
     rating: 'x',
     size: '400'
   }),
