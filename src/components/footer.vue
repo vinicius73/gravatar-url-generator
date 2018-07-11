@@ -1,6 +1,7 @@
 <script>
 export default {
-  name: 'page-footer'
+  name: 'page-footer',
+  version: process.env.VUE_APP_VERSION
 }
 </script>
 
@@ -14,7 +15,7 @@ export default {
     <a class="no-underline" target="_blank" href="https://github.com/vinicius73">@vinicius73</a>
     <br>
     <a target="_blank" class="text-sm" href="https://github.com/vinicius73/gravatar-url-generator">
-      fork it <i class="fas fa-code-branch"></i>
+      fork it <i class="fas fa-code-branch"></i> v{{ $options.version }}
     </a>
   </p>
 </template>
