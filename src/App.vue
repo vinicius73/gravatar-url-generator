@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-  <div id="app" class="container">
+  <div id="app" class="container ml-auto mr-auto">
     <div class="flex h-screen w-full content-center flex-wrap">
       <div class="p-2 ml-auto mr-auto">
         <div class="bg-white max-w-5xl shadow-md rounded px-4 pt-3 pb-4 mb-4">
