@@ -1,29 +1,28 @@
 <script>
-import InputEmail from './components/input-email.vue'
-import GravatarImage from './components/gravatar-image.vue'
-import PageFooter from './components/footer.vue'
-import randomEmail from './support/random-email'
+import InputEmail from "./components/input-email.vue";
+import GravatarImage from "./components/gravatar-image.vue";
+import PageFooter from "./components/footer.vue";
+import randomEmail from "./support/random-email";
 
 export default {
-  name: 'root',
+  name: "root",
   components: { InputEmail, GravatarImage, PageFooter },
   data: () => ({
-    email: '',
+    email: "",
     loading: true
   }),
-  mounted () {
-    randomEmail()
-      .then(email => {
-        this.email = email
-        this.loading = false
-      })
+  mounted() {
+    randomEmail().then(email => {
+      this.email = email;
+      this.loading = false;
+    });
   }
-}
+};
 </script>
 
 <template>
   <div id="app" class="container ml-auto mr-auto">
-    <div class="flex h-screen w-full content-center flex-wrap">
+    <div class="flex h-screen w-full flex-wrap">
       <div class="p-2 ml-auto mr-auto">
         <div class="bg-white max-w-5xl shadow-md rounded px-4 pt-3 pb-4 mb-4">
           <h1 class="text-3xl text-center mb-5 text-indigo-darkest">
@@ -45,6 +44,6 @@ export default {
 <style>
 body {
   background-color: #009586;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 </style>
