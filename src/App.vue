@@ -23,9 +23,9 @@ export default {
 
 <template>
   <div id="app" class="container ml-auto mr-auto">
-    <div class="flex h-screen w-full content-center flex-wrap">
-      <div class="p-2 ml-auto mr-auto max-w-1/3">
-        <div class="bg-white shadow-md rounded px-4 pt-3 pb-4 mb-4">
+    <div class="flex h-screen w-full flex-wrap">
+      <div class="p-2 ml-auto mr-auto">
+        <div class="bg-white shadow-md rounded px-4 pt-3 pb-4 mb-4 main-container">
           <h1 class="text-3xl text-center mb-5 text-indigo-darkest">
             Gravatar URL Generator
           </h1>
@@ -46,5 +46,8 @@ export default {
 body {
   background-color: #009586;
   font-family: 'Ubuntu', sans-serif;
+}
+.main-container {
+  max-width: 400px;
 }
 </style>
