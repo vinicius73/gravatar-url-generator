@@ -1,5 +1,6 @@
 # Gravatar URL Generator
-A fun and friendly generator of Gravatar urls.
+A fun and friendly generator of Gravatar urls.  
+
 ![demo](demo-cover.png)
 
 ## Resources used
