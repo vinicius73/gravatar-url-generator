@@ -12,3 +12,10 @@ https://vinicius73.github.io/gravatar-url-generator/
 - [Font Awesome](https://fontawesome.com)
 - [blueimp-md5](https://www.npmjs.com/package/blueimp-md5)
 - [Ubuntu Font](https://fonts.google.com/specimen/Ubuntu)
+
+## Local roun
+
+```shell
+yarn # npm install
+yarn serve # npm run serve
+```
