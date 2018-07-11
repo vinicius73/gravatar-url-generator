@@ -1,5 +1,8 @@
+const baseUrl = process.env.NODE_ENV === 'production'
+  ? '/gravatar-url-generator/'
+  : '/'
 module.exports = {
-  // ...other vue-cli plugin options...
+  baseUrl,
   pwa: {
     name: 'Gravatar URL Generator',
     themeColor: '#009586',
