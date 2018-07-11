@@ -27,7 +27,7 @@ export default {
     options: Array,
     name: String,
     label: String,
-    value:[String, Number]
+    value: [String, Number]
   }
 }
 </script>
