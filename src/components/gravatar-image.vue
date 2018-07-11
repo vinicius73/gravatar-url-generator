@@ -37,8 +37,8 @@ export default {
 </script>
 
 <template>
-  <div>
-    <img class="w-full" v-bind="{ src, alt: email, title: email }">
+  <div class="max-w-full relative">
+    <img class="w-full max-w-full" v-bind="{ src, alt: email, title: email }">
     <div class="flex items-center border-b border-b-2 border-teal py-2">
       <input
         readonly
