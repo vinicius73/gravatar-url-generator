@@ -3,6 +3,8 @@ A fun and friendly generator of Gravatar urls.
 
 ![demo](demo-cover.png)
 
+https://vinicius73.github.io/gravatar-url-generator/
+
 ## Resources used
 
 - [Vue.js (PWA)](https://vuejs.org)
