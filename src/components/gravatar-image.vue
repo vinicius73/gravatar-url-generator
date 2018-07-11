@@ -58,10 +58,8 @@ export default {
 
 <template>
   <div class="max-w-full relative">
-    <div v-if="loading" class="text-center text-5xl img-loading">
-      <i class="fas fa-sync-alt"></i>
-    </div>
-    <img v-else class="w-full max-w-full" v-bind="{ src, alt: email, title: email }">
+    <div v-if="loading" id="progress-bar"></div>
+    <img class="w-full max-w-full" v-bind="{ src, alt: email, title: email }">
     <div class="flex items-center border-b border-b-2 border-teal py-2">
       <input
         readonly
@@ -86,26 +84,25 @@ export default {
 </template>
 
 <style lang="scss">
-  .img-loading {
-    width: 50%;
-    margin: 0 auto;
-    padding-top: 25%;
-    &:after {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
-    i {
-      -webkit-animation: rotation 2s infinite linear;
-    }
+  #progress-bar {
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(124deg, #009586, #1a2420, #009586, #2c3e50, #009586, #1a2420, #009586, #2c3e50);
+    background-size: 900% 900%;
+
+    animation: progress 9s ease infinite;
   }
 
-  @-webkit-keyframes rotation {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(359deg);
-    }
+  @keyframes progress {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 200%; }
+    100% {background-position: 0% 100%; }
   }
 </style>
