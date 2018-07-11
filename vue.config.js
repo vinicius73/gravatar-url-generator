@@ -1,6 +1,9 @@
 const baseUrl = process.env.NODE_ENV === 'production'
   ? '/gravatar-url-generator/'
   : '/'
+
+const precacheSw = `${baseUrl}precache-sw.js`
+
 module.exports = {
   baseUrl,
   pwa: {
@@ -11,6 +14,8 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: 'black',
 
     workboxOptions: {
+      importScripts: [precacheSw],
+      skipWaiting: true
     }
   }
 }
