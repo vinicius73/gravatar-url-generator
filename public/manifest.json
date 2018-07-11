@@ -1,19 +1,19 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Gravatar URL Generator",
+  "short_name": "Gravatar Generator",
   "icons": [
     {
-      "src": "/img/icons/android-chrome-192x192.png",
+      "src": "/gravatar-url-generator/img/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/img/icons/android-chrome-512x512.png",
+      "src": "/gravatar-url-generator/img/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/gravatar-url-generator/index.html",
   "display": "standalone",
   "background_color": "#009586",
   "theme_color": "#009586"
