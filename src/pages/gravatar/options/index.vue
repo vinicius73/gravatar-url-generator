@@ -1,5 +1,5 @@
 <script>
-import VSelect from './select.vue'
+import VSelect from '../../../components/v-select.vue'
 import { fallbacks, sizes, ratings } from './options'
 
 export default {

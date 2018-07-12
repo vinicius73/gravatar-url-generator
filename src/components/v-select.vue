@@ -1,3 +1,15 @@
+<script>
+export default {
+  name: 'v-select',
+  props: {
+    options: Array,
+    name: String,
+    label: String,
+    value: [String, Number]
+  }
+}
+</script>
+
 <template>
   <div>
     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" :for="name">
@@ -19,18 +31,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'v-select',
-  props: {
-    options: Array,
-    name: String,
-    label: String,
-    value: [String, Number]
-  }
-}
-</script>
-
-<style lang="css">
-</style>
