@@ -2,10 +2,11 @@
 import InputEmail from './components/input-email.vue'
 import PageFooter from './components/footer.vue'
 import randomEmail from './support/random-email'
+import Navigation from './components/navigation.vue'
 
 export default {
   name: 'root',
-  components: { InputEmail, PageFooter },
+  components: { InputEmail, Navigation, PageFooter },
   data: () => ({
     email: '',
     loading: true
@@ -31,6 +32,7 @@ export default {
           <div class="mb-4">
             <InputEmail v-model="email" />
           </div>
+          <Navigation class="mb-4" />
           <div class="mb-4" v-if="!loading">
             <router-view v-bind="{ email }" />
           </div>
@@ -42,8 +44,13 @@ export default {
 </template>
 
 <style>
+:root {
+  --color-green: #009586;
+  --color-blue: #2c3e50;
+  --color-dark: #1a2420;
+}
 body {
-  background-color: #009586;
+  background-color: var(--color-green);
   font-family: 'Ubuntu', sans-serif;
 }
 .main-container {
