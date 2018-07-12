@@ -7,7 +7,7 @@ export default {
   components: { Options },
   extends: Base,
   data: () => ({
-    set: 'set1',
+    set: 'set4',
     bgset: 'bg1',
     size: '400'
   }),
