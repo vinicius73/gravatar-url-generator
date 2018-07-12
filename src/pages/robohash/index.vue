@@ -8,7 +8,7 @@ export default {
   extends: Base,
   data: () => ({
     set: 'set4',
-    bgset: 'bg1',
+    bgset: '',
     size: '400'
   }),
   computed: {
