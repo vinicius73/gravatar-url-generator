@@ -14,7 +14,7 @@ export default {
   computed: {
     src () {
       const { hash, set, bgset, size } = this
-      return `//robohash.org/${hash}?set=${set}&bgset=${bgset}&size=${size}x${size}`
+      return `https://robohash.org/${hash}?set=${set}&bgset=${bgset}&size=${size}x${size}`
     }
   }
 }

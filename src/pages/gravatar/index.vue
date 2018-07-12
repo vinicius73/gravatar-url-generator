@@ -14,7 +14,7 @@ export default {
   computed: {
     src () {
       const { hash, fallback, size, rating } = this
-      return `//gravatar.com/avatar/${hash}?s=${size}&d=${fallback}&r=${rating}`
+      return `https://gravatar.com/avatar/${hash}?s=${size}&d=${fallback}&r=${rating}`
     }
   }
 }
