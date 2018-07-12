@@ -1,4 +1,4 @@
-const makeOptions = list => list.map(value => ({ value }))
+import { makeOptions } from '../../../support/options'
 
 const fallbacks = makeOptions(['404', 'mp', 'identicon', 'monsterid', 'wavatar', 'retro', 'robohash', 'blank'])
 const ratings = makeOptions(['g', 'pg', 'r', 'x'])
