@@ -3,7 +3,7 @@ import Options from './options/index.vue'
 import Base from '../base'
 
 export default {
-  name: 'gravatar-image',
+  name: 'page-gravatar',
   components: { Options },
   extends: Base,
   props: {
