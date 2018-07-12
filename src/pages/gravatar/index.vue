@@ -1,14 +1,11 @@
 <script>
-import md5 from 'blueimp-md5'
 import Options from './options/index.vue'
-import InputCopy from '../../components/input-copy.vue'
-import ProgressBar from '../../components/progress-bar.vue'
-import AvatarImage from '../../components/image.vue'
-import { debounce } from 'lodash-es'
+import Base from '../base'
 
 export default {
   name: 'gravatar-image',
-  components: { Options, InputCopy, ProgressBar, AvatarImage },
+  components: { Options },
+  extends: Base,
   props: {
     email: String
   },
@@ -19,33 +16,10 @@ export default {
     size: '400'
   }),
   computed: {
-    hash () {
-      return md5(this.email)
-    },
     src () {
       const { hash, fallback, size, rating } = this
       return `//gravatar.com/avatar/${hash}?s=${size}&d=${fallback}&r=${rating}`
     }
-  },
-  watch: {
-    src: 'load'
-  },
-  methods: {
-    load: debounce(function load () {
-      this.loading = true
-      const img = new Image()
-
-      img.onload = () => {
-        this.$nextTick(() => {
-          this.loading = false
-        })
-      }
-
-      img.src = this.src
-    }, 600)
-  },
-  mounted () {
-    this.load()
   }
 }
 </script>
@@ -54,10 +28,7 @@ export default {
   <div class="max-w-full relative">
     <ProgressBar v-if="loading" />
     <AvatarImage v-bind="{ src, email }" />
-    <InputCopy :value="src" />
-
-    <br>
-    <br>
+    <InputCopy class="mb-5" :value="src" />
 
     <Options
       :fallback.sync="fallback"
