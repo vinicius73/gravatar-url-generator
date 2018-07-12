@@ -10,7 +10,6 @@ export default {
     email: String
   },
   data: () => ({
-    loading: true,
     fallback: 'robohash',
     rating: 'x',
     size: '400'

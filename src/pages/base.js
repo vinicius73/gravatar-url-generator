@@ -7,6 +7,9 @@ import { debounce } from 'lodash-es'
 export default {
   mixins: [HashMixin()],
   components: { InputCopy, ProgressBar, AvatarImage },
+  data: () => ({
+    loading: true
+  }),
   watch: {
     src: 'load'
   },
