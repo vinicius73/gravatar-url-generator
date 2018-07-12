@@ -6,9 +6,6 @@ export default {
   name: 'page-gravatar',
   components: { Options },
   extends: Base,
-  props: {
-    email: String
-  },
   data: () => ({
     fallback: 'robohash',
     rating: 'x',

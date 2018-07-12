@@ -10,6 +10,9 @@ export default {
   data: () => ({
     loading: true
   }),
+  props: {
+    email: String
+  },
   watch: {
     src: 'load'
   },
