@@ -1,6 +1,6 @@
 <script>
 import md5 from 'blueimp-md5'
-import Options from './gravatar-options/index.vue'
+import Options from './options/index.vue'
 import { debounce } from 'lodash-es'
 
 export default {

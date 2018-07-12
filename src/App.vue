@@ -1,12 +1,11 @@
 <script>
 import InputEmail from './components/input-email.vue'
-import GravatarImage from './components/gravatar-image.vue'
 import PageFooter from './components/footer.vue'
 import randomEmail from './support/random-email'
 
 export default {
   name: 'root',
-  components: { InputEmail, GravatarImage, PageFooter },
+  components: { InputEmail, PageFooter },
   data: () => ({
     email: '',
     loading: true
@@ -33,7 +32,7 @@ export default {
             <InputEmail v-model="email" />
           </div>
           <div class="mb-4" v-if="!loading">
-            <GravatarImage v-bind="{ email }" />
+            <router-view v-bind="{ email }" />
           </div>
         </div>
         <PageFooter class="text-center text-white text-xs mb-5" />
