@@ -4,6 +4,7 @@ import Options from './options'
 
 export default {
   name: 'page-robohash',
+  title: 'RoboHash',
   components: { Options },
   extends: Base,
   data: () => ({

@@ -4,6 +4,7 @@ import Base from '../base'
 
 export default {
   name: 'page-gravatar',
+  title: 'Gravatar',
   components: { Options },
   extends: Base,
   data: () => ({
