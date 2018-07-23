@@ -1,4 +1,7 @@
 # Gravatar URL Generator
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/vinicius73/gravatar-url-generator.svg)](https://greenkeeper.io/)
+
 A fun and friendly generator of Gravatar urls.  
 
 ![demo](demo-cover.png)
