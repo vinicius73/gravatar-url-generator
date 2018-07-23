@@ -10,7 +10,11 @@ const routes = [{
 }, {
   path: '/robohash',
   name: 'robohash',
-  component: () => import(/* webpackChunkName: "page-gravatar" */'./pages/robohash')
+  component: () => import(/* webpackChunkName: "page-robohash" */'./pages/robohash')
+}, {
+  path: '/dicebear',
+  name: 'dicebear',
+  component: () => import(/* webpackChunkName: "page-dicebear" */'./pages/dicebear')
 }]
 
 export default new Router({ routes })

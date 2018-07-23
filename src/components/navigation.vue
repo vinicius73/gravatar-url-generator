@@ -8,8 +8,11 @@ export default {
     <router-link :to="{ name: 'gravatar' }" class="flex-1 text-center text-white font-bold py-2 px-4 rounded-l">
       Gravatar
     </router-link>
-    <router-link :to="{ name: 'robohash' }" class="flex-1 text-center text-white font-bold py-2 px-4 rounded-r">
+    <router-link :to="{ name: 'robohash' }" class="flex-1 text-center text-white font-bold py-2 px-4">
       Robohash
+    </router-link>
+    <router-link :to="{ name: 'dicebear' }" class="flex-1 text-center text-white font-bold py-2 px-4 rounded-r">
+      DiceBear
     </router-link>
   </div>
 </template>
