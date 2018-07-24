@@ -9,7 +9,7 @@ export default {
       Gravatar
     </router-link>
     <router-link :to="{ name: 'robohash' }" class="flex-1 text-center text-white font-bold py-2 px-4">
-      Robohash
+      RoboHash
     </router-link>
     <router-link :to="{ name: 'dicebear' }" class="flex-1 text-center text-white font-bold py-2 px-4 rounded-r">
       DiceBear
