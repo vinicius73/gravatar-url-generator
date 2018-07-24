@@ -4,7 +4,7 @@ import Options from './options/index.vue'
 
 export default {
   name: 'page-dicebear',
-  title: 'Dicebear',
+  title: 'DiceBear',
   extends: Base,
   components: { Options },
   data: () => ({
