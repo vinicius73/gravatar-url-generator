@@ -1,8 +1,12 @@
-# Gravatar URL Generator
+# Avatar URL Generator
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/vinicius73/gravatar-url-generator.svg)](https://greenkeeper.io/)
 
-A fun and friendly generator of Gravatar urls.  
+A fun and friendly generator of Avatar urls.  
+
+- [Gravatar](https://gravatar.com/)
+- [RoboHash](https://robohash.org/)
+- [DiceBear](https://avatars.dicebear.com/)
 
 ![demo](demo-cover.png)
 
