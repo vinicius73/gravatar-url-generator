@@ -15,6 +15,10 @@ const routes = [{
   path: '/dicebear',
   name: 'dicebear',
   component: () => import(/* webpackChunkName: "page-dicebear" */'./pages/dicebear')
+}, {
+  path: '/about',
+  name: 'about',
+  component: () => import(/* webpackChunkName: "page-about" */'./pages/about')
 }]
 
 export default new Router({ routes })

@@ -12,7 +12,9 @@ export default {
       <i title="Vue.js" aria-label="Vue.js" class="fab fa-vuejs"></i>
     </a>
     by
-    <a class="no-underline" target="_blank" href="https://github.com/vinicius73">@vinicius73</a>
+    <router-link :to="{ name: 'about' }" class="no-underline">
+      @vinicius73
+    </router-link>
     <br>
     <a target="_blank" class="text-sm" href="https://github.com/vinicius73/gravatar-url-generator">
       fork it <i class="fas fa-code-branch"></i> v{{ $options.version }}
