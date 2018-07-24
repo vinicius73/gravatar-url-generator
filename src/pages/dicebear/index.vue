@@ -26,5 +26,7 @@ export default {
     <InputCopy class="mb-5" :value="src" />
     <Options
       :sprite.sync="sprite" />
+
+    <GeneratorLink href="https://avatars.dicebear.com" />
   </div>
 </template>

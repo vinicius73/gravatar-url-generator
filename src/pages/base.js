@@ -2,11 +2,12 @@ import HashMixin from '../support/hash-mixin'
 import InputCopy from '../components/input-copy.vue'
 import ProgressBar from '../components/progress-bar.vue'
 import AvatarImage from '../components/image.vue'
+import GeneratorLink from '../components/generator-link.vue'
 import { debounce } from 'lodash-es'
 
 export default {
   mixins: [HashMixin()],
-  components: { InputCopy, ProgressBar, AvatarImage },
+  components: { InputCopy, ProgressBar, AvatarImage, GeneratorLink },
   data: () => ({
     loading: true
   }),

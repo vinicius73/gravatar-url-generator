@@ -30,5 +30,7 @@ export default {
       :set.sync="set"
       :size.sync="size"
       :bgset.sync="bgset" />
+
+    <GeneratorLink href="https://robohash.org" />
   </div>
 </template>

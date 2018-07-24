@@ -31,5 +31,7 @@ export default {
       :fallback.sync="fallback"
       :size.sync="size"
       :rating.sync="rating" />
+
+    <GeneratorLink href="https://gravatar.com" />
   </div>
 </template>
