@@ -7,6 +7,7 @@ A fun and friendly generator of Avatar urls.
 - [Gravatar](https://gravatar.com/)
 - [RoboHash](https://robohash.org/)
 - [DiceBear](https://avatars.dicebear.com/)
+- [Adorable](http://avatars.adorable.io/)
 
 ![demo](demo-cover.png)
 
