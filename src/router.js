@@ -16,6 +16,10 @@ const routes = [{
   name: 'dicebear',
   component: () => import(/* webpackChunkName: "page-dicebear" */'./pages/dicebear')
 }, {
+  path: '/adorable',
+  name: 'adorable',
+  component: () => import(/* webpackChunkName: "page-adorable" */'./pages/adorable')
+}, {
   path: '/about',
   name: 'about',
   component: () => import(/* webpackChunkName: "page-about" */'./pages/about')
