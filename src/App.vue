@@ -9,14 +9,22 @@ export default {
   components: { InputEmail, Navigation, PageFooter },
   data: () => ({
     email: '',
+    ready: false,
     loading: true
   }),
+  methods: {
+    randomEmail () {
+      this.loading = true
+      randomEmail()
+        .then(email => {
+          this.email = email
+          this.loading = false
+          this.ready = true
+        })
+    }
+  },
   mounted () {
-    randomEmail()
-      .then(email => {
-        this.email = email
-        this.loading = false
-      })
+    this.randomEmail()
   }
 }
 </script>
@@ -30,10 +38,10 @@ export default {
             Avatar URL Generator
           </h1>
           <div class="mb-4">
-            <InputEmail v-model="email" />
+            <InputEmail @call:generate="randomEmail" v-bind="{ loading }" v-model="email" />
           </div>
           <Navigation class="mb-4" />
-          <div class="mb-4" v-if="!loading">
+          <div class="mb-4" v-if="ready">
             <router-view v-bind="{ email }" />
           </div>
         </div>

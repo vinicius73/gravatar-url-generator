@@ -1,7 +1,7 @@
-const randomEmail = () => fetch('https://jsonplaceholder.typicode.com/users')
+const randomEmail = () => fetch('https://randomuser.me/api/?inc=email')
   .then(response => response.json())
-  .then(list => {
-    return list[Math.floor(Math.random() * list.length)]
+  .then(({ results }) => {
+    return results[Math.floor(Math.random() * results.length)]
   })
   .then(user => (user.email).toLowerCase())
   .catch(e => {
