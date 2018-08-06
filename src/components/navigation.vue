@@ -24,7 +24,7 @@ export default {
   a {
     background-color: var(--color-green);
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 0.8em;
     &:hover, &.router-link-exact-active {
       background-color: var(--color-blue);
     }
