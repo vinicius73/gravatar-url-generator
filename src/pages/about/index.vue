@@ -1,6 +1,6 @@
 <script>
 import AvatarImage from '../../components/image.vue'
-import Links from './liks.vue'
+import Links from './links.vue'
 
 export default {
   name: 'page-about',
