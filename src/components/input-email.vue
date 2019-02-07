@@ -17,7 +17,7 @@ export default {
   <div class="flex items-center">
     <input
       class="appearance-none bg-transparent focus:outline-none border-none w-full text-grey-darker mr-3 py-2 px-3 text-2xl leading-tight"
-      type="text"
+      type="email"
       placeholder="Gravatar e-mail"
       :disabled="loading"
       v-bind="{ value }"
