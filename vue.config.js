@@ -3,14 +3,14 @@ const now = Math.round(Date.now() / 6000).toString(36)
 
 process.env.VUE_APP_VERSION = `${version}-${now}`
 
-const baseUrl = process.env.NODE_ENV === 'production'
+const publicPath = process.env.NODE_ENV === 'production'
   ? '/gravatar-url-generator/'
   : '/'
 
-const precacheSw = `${baseUrl}precache-sw.js`
+const precacheSw = `${publicPath}precache-sw.js`
 
 module.exports = {
-  baseUrl,
+  publicPath,
   pwa: {
     name: 'Gravatar URL Generator',
     themeColor: '#009586',
