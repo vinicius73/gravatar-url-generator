@@ -8096,10 +8096,10 @@ regexpu-core@^4.2.0:
     unicode-match-property-ecmascript "^1.0.4"
     unicode-match-property-value-ecmascript "^1.0.2"
 
-register-service-worker@^1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/register-service-worker/-/register-service-worker-1.5.2.tgz#a4631896c38d6ec5597358f44988cc46a911912d"
-  integrity sha512-XNqSZHJsFGnvEGkg/2IrCp6G8Ya3qLj4mq0bSHil/dfdO82LOxGnMnJjAD9MYCvf/8cDCO8pL+1i65yzmP7rPQ==
+register-service-worker@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/register-service-worker/-/register-service-worker-1.6.0.tgz#4a551b0c24e9d9ce6ff9def2ed8c366b0e633638"
+  integrity sha512-9XMpHojHe/7ijJe9gjv7R61PafxhQfehqpK/z7QwEPRgLzwPllrzMv+BLzW1gPnujU5Lc7HFLQprYVtnJp9oIw==
 
 regjsgen@^0.2.0:
   version "0.2.0"
