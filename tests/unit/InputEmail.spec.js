@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils'
 import EmailInput from '@/components/input-email.vue'
 
 describe('components/input-email.vue', () => {
-  it('feel', () => {
+  it('feel', async () => {
     const wrapper = shallowMount(EmailInput, {
       propsData: { value: 'xpto' }
     })
@@ -26,11 +26,15 @@ describe('components/input-email.vue', () => {
     // trigger click in button
     button.trigger('click')
 
+    await wrapper.vm.$nextTick()
+
     // assert call:generate event
     expect(wrapper.emitted('call:generate').length).toBe(1)
 
     // update loading
     wrapper.setProps({ loading: true })
+
+    await wrapper.vm.$nextTick()
 
     // assert spin element
     expect(button.find('i.fas').classes('spin')).toBe(true)
