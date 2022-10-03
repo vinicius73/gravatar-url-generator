@@ -1,36 +1,40 @@
 <script>
-import VSelect from '../../../components/v-select.vue'
+import LvDropdown from 'lightvue/dropdown'
 import { fallbacks, sizes, ratings } from './options'
 
 export default {
   name: 'gravatar-options',
-  components: { VSelect },
+  components: { LvDropdown },
   fallbacks,
   sizes,
   ratings,
-  props: ['rating', 'size', 'fallback']
+  props: ['rating', 'size', 'fallback'],
+  data: function () {
+    return {
+      selectedSize: { value: this.size },
+      selectedFallBack: { value: this.fallback },
+      selectedRating: { value: this.rating }
+    }
+  },
+  methods: {
+    updateValue (e) {
+      console.log(e.value.value)
+      this.$emit('update:size', e.value.value)
+    }
+  }
 }
 </script>
 
 <template>
   <div class="flex flex-wrap -mx-3 mb-2">
-    <v-select class="w-full md:w-1/3 px-3 mb-6 md:mb-0"
-      :options="$options.sizes"
-      name="size"
-      label="size"
-      :value="size"
-      @input="value => $emit('update:size', value)" />
-    <v-select class="w-full md:w-1/3 px-3 mb-6 md:mb-0"
-      :options="$options.fallbacks"
-      name="fallback"
-      label="default"
-      :value="fallback"
-      @input="value => $emit('update:fallback', value)" />
-    <v-select class="w-full md:w-1/3 px-3 mb-6 md:mb-0"
-      :options="$options.ratings"
-      name="ratings"
-      label="rating"
-      :value="rating"
-      @input="value => $emit('update:rating', value)" />
+    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <lv-dropdown  v-model="selectedSize" label="size" :options="$options.sizes" optionLabel="value" @change="updateValue"/>
+    </div>
+      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+        <lv-dropdown  v-model="selectedFallBack" label="default" :options="$options.fallbacks" optionLabel="value" @change="value => $emit('update:fallback', value.value.value)"/>
+      </div>
+      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+        <lv-dropdown  v-model="selectedRating" label="rating" :options="$options.ratings" optionLabel="value" @change="value => $emit('update:rating', value.value.value)"/>
+      </div>
   </div>
 </template>
