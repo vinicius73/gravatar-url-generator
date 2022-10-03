@@ -17,7 +17,7 @@ const sets = [{
 }]
 
 const bgsets = makeOptions([
-  { label: 'none', value: '' }, 'bg1', 'bg2'
+  { label: 'none', value: '' }, { label: 'bg1', value: 'bg1' }, { label: 'bg2', value: 'bg2' }
 ])
 
 export { sets, bgsets, sizes }

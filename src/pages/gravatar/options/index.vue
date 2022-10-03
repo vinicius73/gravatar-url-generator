@@ -15,20 +15,14 @@ export default {
       selectedFallBack: { value: this.fallback },
       selectedRating: { value: this.rating }
     }
-  },
-  methods: {
-    updateValue (e) {
-      console.log(e.value.value)
-      this.$emit('update:size', e.value.value)
-    }
   }
 }
 </script>
 
 <template>
-  <div class="flex flex-wrap -mx-3 mb-2">
+  <div class="flex flex-wrap -mx-3 mb-2 uppercase text-grey-darker text-xs mb-2">
     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-      <lv-dropdown  v-model="selectedSize" label="size" :options="$options.sizes" optionLabel="value" @change="updateValue"/>
+      <lv-dropdown  v-model="selectedSize" label="size" :options="$options.sizes" optionLabel="value" @change="value => $emit('update:size', value.value.value)"/>
     </div>
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <lv-dropdown  v-model="selectedFallBack" label="default" :options="$options.fallbacks" optionLabel="value" @change="value => $emit('update:fallback', value.value.value)"/>
