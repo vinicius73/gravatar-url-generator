@@ -17,8 +17,8 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-wrap -mx-3 mb-2 uppercase text-grey-darker text-xs mb-2">
-    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+  <div class="flex flex-wrap -mx-3 uppercase text-grey-darker text-xs">
+    <div class="w-full md:w-1/3 px-3 md:mb-0 mb-6">
       <lv-dropdown  v-model="selectedSprite " label="SPRITE" :options="$options.sprites" optionLabel="value" @change="value => $emit('update:sprite', value.value.value)"/>
     </div>
   </div>
