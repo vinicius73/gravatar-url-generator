@@ -1,23 +1,25 @@
 <script>
-import VSelect from '../../../components/v-select.vue'
+import LvDropdown from 'lightvue/dropdown'
 import { sprites } from './options'
 
 export default {
-  components: { VSelect },
+  components: { LvDropdown },
   sprites,
   props: {
     sprite: String
+  },
+  data: function () {
+    return {
+      selectedSprite: { value: this.sprite }
+    }
   }
 }
 </script>
 
 <template>
-  <div class="flex flex-wrap -mx-3 mb-2">
-    <v-select class="w-full md:w-1/3 px-3 mb-6 md:mb-0"
-      :options="$options.sprites"
-      name="sprite"
-      label="sprite"
-      :value="sprite"
-      @input="value => $emit('update:sprite', value)" />
+  <div class="flex flex-wrap -mx-3 uppercase text-grey-darker text-xs">
+    <div class="w-full md:w-1/3 px-3 md:mb-0 mb-6">
+      <lv-dropdown  v-model="selectedSprite " label="SPRITE" :options="$options.sprites" optionLabel="value" @change="value => $emit('update:sprite', value.value.value)"/>
+    </div>
   </div>
 </template>

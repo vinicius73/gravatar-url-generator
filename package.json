@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "blueimp-md5": "^2.18.0",
+    "lightvue": "^0.4.8",
     "lodash-es": "^4.17.15",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.12",
